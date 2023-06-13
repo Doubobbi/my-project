@@ -3,20 +3,45 @@
 <head>
 <title>WEB1 - JavaScript</title>
 <meta charset="utf-8">
-<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
-   
+ 
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value ==='night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+        console.log(alist[i]);
+        alist[i].style.color = 'powderblue';
+        i = i + 1;
+            }
+    } else{
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+        console.log(alist[i]);
+        alist[i].style.color = 'blue';
+        i = i + 1;
+            }
+    }">
+
     
-<div id="grid">
 <ol>
     <li><a href="1.html">HTML</a></li>
     <li><a href="2.html">CSS</a></li>
     <li><a href="3.html">JavaScript</a></li>
    
 </ol>
-<div id="article">
 <h2>JavaScript</h2>
 <p>
     JavaScript. 
@@ -26,10 +51,21 @@
     1995년 9월 당시 넷스케이프사의 직원이었던 Brendan Eich는 서버 쪽 언어로 JavaScript를 생각해냈습니다. 
     머지않아 JavaScript는 Netscape Navigator 2.0에 들어왔습니다. 
 </p>
-</div>
-</div>
-</body>
-</html>
+
+<input type="button" value="night" onclick="
+if(this.value ==='night'){
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    this.value = 'day';
+} else{
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    this.value = 'night';
+}">
+
+
+
+
 <table>
     <tr>
         <td>head</td>
@@ -44,3 +80,15 @@
         <td>97.9%</td>
     </tr>
 </table>
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
